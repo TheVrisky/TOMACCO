@@ -1,0 +1,20 @@
+[package]
+name = "tomacco"
+version = "0.1.0"
+description = "TOMACCO - Your Browser. Your Rules. Your Weird Little World."
+edition = "2021"
+
+[lib]
+name = "tomacco_lib"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["unstable"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+strip = true
+lto = true
